@@ -1,9 +1,5 @@
-export const UserInfo = ({ user }) => {
-  return (
-    <div className="UserInfo">
-      <p>Name: {user.name}</p>
-      <p>Username: {user.username}</p>
-      <p>Email: {user.email}</p>
-    </div>
-  );
-};
+export const UserInfo = ({ user }) => (
+  <a className="UserInfo" href={`mailto:${user.email}`}>
+    {user.name}
+  </a>
+);
